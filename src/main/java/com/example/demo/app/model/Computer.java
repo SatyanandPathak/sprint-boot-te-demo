@@ -3,13 +3,25 @@ package com.example.demo.app.model;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Computer {
+public class Computer{
 	
 	private int deviceId;
-	
 	private String os;
 	private int memory;
 	private float ram;
+	protected String COMPUTER_CLASS_VALUE = "only subclass can call me";
+	
+	
+	
+	public Computer(int deviceId, String os, int memory, float ram) {
+		super();
+		this.deviceId = deviceId;
+		this.os = os;
+		this.memory = memory;
+		this.ram = ram;
+	}
+	
+	public Computer(){}
 	
 	public int getDeviceId() {
 		return deviceId;
