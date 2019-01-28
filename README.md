@@ -23,6 +23,15 @@ Spring important Annotations:
 2. @Component: 
 				says to spring create an Object of mine through (IOC or DI)
 				It is a general annotation by which spring loads the object into its(spring) container
+3. @Services, @Respository and @Controller(@RestController) are the three specilized annotations of 		@Component
+4. @Services: we use for Services. Services used Repository
+5. @Repository: We use it for Repository which talks to actual database for db operations
+6. @Controller: 
+
+7. We have to annotate a class with either of the above annotations like @Repository, @Component, 
+   @Service, @Controller or @RestController. Absence of this leads to Beans not found
+8. Then In order to inject one class into another(i.e., in order to create an object into another class) 
+   we have to give @Autowire. Absence Leads to null pointer exception
 
 
 Flow is: Controller -> Services --> Repository -> database
